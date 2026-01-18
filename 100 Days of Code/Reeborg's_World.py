@@ -18,3 +18,6 @@
 #         move()
 #     else:
 #         turn_left()
+#
+
+# Day Six

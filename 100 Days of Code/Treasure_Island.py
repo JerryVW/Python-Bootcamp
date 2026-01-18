@@ -59,3 +59,4 @@ elif direction == "right":
     print("GAME OVER!")
 else:
     print("That direction is not an option!")
+# Day Three

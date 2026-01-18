@@ -7,3 +7,4 @@ tip = tip / 100
 total = ((bill * tip) + bill) / people
 final_amount = round(total, 2)
 print(f"Each person should pay ${final_amount}")
+# Day Two
