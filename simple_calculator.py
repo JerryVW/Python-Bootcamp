@@ -21,18 +21,28 @@ calculator = {
     "/": divide,
 }
 
-n1 = int(input("Enter a number: "))
-operator = input("Enter a operator a choice of +, -, *, /: ")
-n2 = int(input("Enter another number: "))
 
-if operator == "+":
-    print(calculator[operator](n1, n2))
+def calculation():
+    continue_calculation = True
+    n1 = float(input("Enter a number: "))
 
-if operator == "-":
-    print(calculator[operator](n1, n2))
+    while continue_calculation:
 
-if operator == "*":
-    print(calculator[operator](n1, n2))
+        operator = input("Enter a operator a choice of +, -, *, /: ")
+        n2 = float(input("Enter another number: "))
+        answer = calculator[operator](n1, n2)
+        print(f"{n1} {operator} {n2} = {answer}")
 
-if operator == "/":
-    print(calculator[operator](n1, n2))
+        choice = input(
+            f"Do you want to continue calculation with {answer}? 'y' or 'n': "
+        ).lower()
+        if choice == "y":
+            n1 = answer
+            print("\n" * 2)
+        else:
+            continue_calculation = False
+            print("\n" * 4)
+            calculation()
+
+
+calculation()
