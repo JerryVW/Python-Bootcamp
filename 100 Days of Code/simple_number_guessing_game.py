@@ -5,7 +5,7 @@ print("I am thinking of a number between 1 and 100.")
 difficulty = input("Please choose a difficulty. Type 'easy' or 'hard': ").lower()
 
 random_number = random.randint(1, 100)
-print(random_number)
+# print(random_number)
 remaining_guesses = 0
 not_right_number = True
 
